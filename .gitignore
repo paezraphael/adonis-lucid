@@ -5,8 +5,7 @@ npm-debug.log
 .idea
 out
 .nyc_output
-test/**/tmp
-test/functional/database
+test/tmp
 .DS_STORE
 .vscode/
 *.sublime-project
@@ -16,4 +15,5 @@ build
 dist
 yarn.lock
 shrinkwrap.yaml
-package-lock.json
+docs
+api-docs
