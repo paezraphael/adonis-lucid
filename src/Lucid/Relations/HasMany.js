@@ -202,7 +202,7 @@ class HasMany extends BaseRelation {
     await this._persistParentIfRequired(trx)
 
     const savedRows = []
-    for (const payload of arrayOfPayload) {
+    for (let payload of arrayOfPayload) {
       const row = await this.create(payload, trx)
       savedRows.push(row)
     }
@@ -230,7 +230,7 @@ class HasMany extends BaseRelation {
     await this._persistParentIfRequired(trx)
 
     const savedRows = []
-    for (const relatedInstance of arrayOfRelatedInstances) {
+    for (let relatedInstance of arrayOfRelatedInstances) {
       const row = await this.save(relatedInstance, trx)
       savedRows.push(row)
     }

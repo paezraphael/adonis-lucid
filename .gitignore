@@ -5,7 +5,7 @@ npm-debug.log
 .idea
 out
 .nyc_output
-test/**/tmp
+test-helpers/tmp
 test/functional/database
 .DS_STORE
 .vscode/
@@ -16,4 +16,3 @@ build
 dist
 yarn.lock
 shrinkwrap.yaml
-package-lock.json

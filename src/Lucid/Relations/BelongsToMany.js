@@ -808,9 +808,9 @@ class BelongsToMany extends BaseRelation {
     await this._loadAndCachePivot(trx)
     const rows = !Array.isArray(references) ? [references] : references
 
-    const attachedRows = []
+    let attachedRows = []
 
-    for (const row of rows) {
+    for (let row of rows) {
       let pivotInstance = this._getPivotInstance(row)
       if (!pivotInstance) {
         pivotInstance = await this._attachSingle(row, pivotCallback, trx)
@@ -968,7 +968,7 @@ class BelongsToMany extends BaseRelation {
     await this._persistParentIfRequired()
 
     const rows = []
-    for (const relatedInstance of arrayOfRelatedInstances) {
+    for (let relatedInstance of arrayOfRelatedInstances) {
       const row = await this.save(relatedInstance, pivotCallback)
       rows.push(row)
     }
@@ -1020,7 +1020,7 @@ class BelongsToMany extends BaseRelation {
     await this._persistParentIfRequired()
 
     const savedRows = []
-    for (const relatedInstance of rows) {
+    for (let relatedInstance of rows) {
       const row = await this.create(relatedInstance, pivotCallback)
       savedRows.push(row)
     }

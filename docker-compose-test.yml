@@ -1,0 +1,11 @@
+version: '3.4'
+services:
+  test:
+    build:
+      context: .
+      target: build-deps
+    links:
+      - mysql
+      - pg
+      - mssql
+    command: ["npm", "run", "test:docker"]

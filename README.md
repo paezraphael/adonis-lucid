@@ -1,99 +1,50 @@
-# Adonis Lucid 💡
+<div align="center">
+  <img src="https://res.cloudinary.com/adonisjs/image/upload/q_100/v1558612869/adonis-readme_zscycu.jpg" width="600px">
+</div>
 
-Adonis lucid is a SQL ORM built on top of [knexjs](http://knexjs.org/). It is built on standards of [Active Record pattern](https://en.wikipedia.org/wiki/Active_record_pattern) which become mainly popular with Ruby on Rails.
+<br />
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Appveyor][appveyor-image]][appveyor-url]
-[![Coveralls][coveralls-image]][coveralls-url]
+<div align="center">
+  <h3>SQL ORM</h3>
+  <p>Lucid is the official SQL ORM for AdonisJS. It comes with an Active Record ORM, Query Builder, Migrations, Seeds and Factories</p>
+</div>
 
-<img src="http://res.cloudinary.com/adonisjs/image/upload/q_100/v1497112678/adonis-purple_pzkmzt.svg" width="200px" align="right" hspace="30px" vspace="100px">
+<br />
 
-## Features?
+<div align="center">
 
-Apart from being just a query builder, Lucid has following features.
+[![circleci-image]][circleci-url] [![typescript-image]][typescript-url] [![npm-image]][npm-url] [![license-image]][license-url]
 
-1. ES6 classes based data Models.
-2. Model Hooks
-3. Associations
-4. Serializers ( Vanilla and JSON API )
-5. Migrations
-6. Factories and Seeds
+</div>
 
-## Setup
+<div align="center">
+  <h3>
+    <a href="https://adonisjs.com">
+      Website
+    </a>
+    <span> | </span>
+    <a href="https://adonisjs.com/docs">
+      Guides
+    </a>
+    <span> | </span>
+    <a href="CONTRIBUTING.md">
+      Contributing
+    </a>
+  </h3>
+</div>
 
-The provider must be installed from npm using `adonis` command.
+<div align="center">
+  <sub>Built with ❤︎ by <a href="https://github.com/thetutlage">Harminder Virk</a>
+</div>
 
-```js
-adonis install @adonisjs/lucid
-```
+[circleci-image]: https://img.shields.io/circleci/build/github/adonisjs/lucid/master.svg?style=for-the-badge&logo=circleci
+[circleci-url]: https://circleci.com/gh/adonisjs/lucid "circleci"
 
-Post that make sure to read [instructions.md](instructions.md) file on how to setup the provider.
+[typescript-image]: https://img.shields.io/badge/Typescript-294E80.svg?style=for-the-badge&logo=typescript
+[typescript-url]:  "typescript"
 
+[npm-image]: https://img.shields.io/npm/v/@adonisjs/lucid/alpha.svg?style=for-the-badge&logo=npm
+[npm-url]: https://www.npmjs.com/package/@adonisjs/lucid/v/alpha "npm"
 
-## Node/OS Target
-
-This repo/branch is supposed to run fine on all major OS platforms and targets `Node.js >=7.0`
-
-## Development
-
-Great! If you are planning to contribute to the framework, make sure to adhere to following conventions, since a consistent code-base is always joy to work with.
-
-Run the following command to see list of available npm scripts.
-
-```
-npm run
-```
-
-### Tests & Linting
-
-1. Lint your code using standardJs. Run `npm run lint` command to check if there are any linting errors.
-2. Make sure you write tests for all the changes/bug fixes.
-3. Also you can write **regression tests**, which shows that something is failing but doesn't break the build. Which is actually a nice way to show that something fails. Regression tests are written using `test.failing()` method.
-4. Make sure all the tests are passing on `travis` and `appveyor`.
-
-### General Practices
-
-Since Es6 is in, you should strive to use latest features. For example:
-
-1. Use `Spread` over `arguments` keyword.
-2. Never use `bind` or `call`. After calling these methods, we cannot guarantee the scope of any methods and in AdonisJs codebase we do not override the methods scope.
-3. Make sure to write proper docblock.
-
-## Issues & PR
-
-It is always helpful if we try to follow certain practices when creating issues or PR's, since it will save everyone's time.
-
-1. Always try creating regression tests when you find a bug (if possible).
-2. Share some context on what you are trying to do, with enough code to reproduce the issue.
-3. For general questions, please create a forum thread.
-4. When creating a PR for a feature, make sure to create a parallel PR for docs too.
-
-
-## Regression Tests
-
-Regression tests are tests, which shows how a piece of code fails under certain circumstance, but the beauty is even after the failure, the test suite will never fail. Actually is a nice way to notify about bugs, but making sure everything is green.
-
-The regression tests are created using
-
-```
-test.failing('2 + 2 is always 4, but add method returns 6', (assert) => {
- assert.true(add(2, 2), 4)
-})
-```
-
-Now since the `add` method has a bug, it will return `6` instead of `4`. But the build will pass.
-
-[appveyor-image]: https://img.shields.io/appveyor/ci/thetutlage/adonis-lucid/master.svg?style=flat-square
-
-[appveyor-url]: https://ci.appveyor.com/project/thetutlage/adonis-lucid
-
-[npm-image]: https://img.shields.io/npm/v/@adonisjs/lucid.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/@adonisjs/lucid
-
-[travis-image]: https://img.shields.io/travis/adonisjs/adonis-lucid/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/adonisjs/adonis-lucid
-
-[coveralls-image]: https://img.shields.io/coveralls/adonisjs/adonis-lucid/develop.svg?style=flat-square
-
-[coveralls-url]: https://coveralls.io/github/adonisjs/adonis-lucid
+[license-image]: https://img.shields.io/npm/l/@adonisjs/lucid?color=blueviolet&style=for-the-badge
+[license-url]: LICENSE.md "license"

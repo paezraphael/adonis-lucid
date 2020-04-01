@@ -1,18 +1,30 @@
-version: '2'
+version: '3.4'
 services:
   mysql:
     image: mysql:5.7
-    expose:
-      - '3306'
+    restart: always
+    environment:
+      MYSQL_DATABASE: lucid
+      MYSQL_USER: virk
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
     ports:
       - '3306:3306'
-    restart: 'always'
+    expose:
+      - '3306'
+  pg:
+    image: postgres:11
+    restart: always
     environment:
-      MYSQL_ALLOW_EMPTY_PASSWORD: ''
-      MYSQL_ROOT_PASSWORD: 'root'
-      MYSQL_USER: 'travis'
-      MYSQL_PASSWORD: ''
-      MYSQL_ROOT_HOST: '%'
-      MYSQL_DATABASE: 'testing_lucid'
-    volumes:
-      - ./mysqldata:/var/lib/mysql
+      POSTGRES_DB: lucid
+      POSTGRES_USER: virk
+      POSTGRES_PASSWORD: password
+    ports:
+      - 5432:5432
+  mssql:
+      image: microsoft/mssql-server-linux:2017-latest
+      ports:
+        - 1433:1433
+      environment:
+        SA_PASSWORD: 'arandom&233password'
+        ACCEPT_EULA: 'true'
